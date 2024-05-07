@@ -30,7 +30,7 @@ def calculate_bmi(weight, height, weight_unit, height_unit):
 
 
 def calculate_water_intake(weight, bottle_size, unit, bottle_unit):
-    if bottle_unit == 'ml' or unit == 'cc':
+    if bottle_unit == 'ml' or bottle_unit == 'cc':
         if unit == 'kg':
             water_intake = float(weight) * 0.033 * 1000 / float(bottle_size)
         elif unit == 'lbs':
