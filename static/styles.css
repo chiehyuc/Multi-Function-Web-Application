@@ -58,5 +58,6 @@ p.error {
 }
 
 p.result {
-    margin-top: 20px;
+    background-color: #ece584;
+    margin-top: 50px;
 }
