@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Intake Calculator</title>
+</head>
+<body>
+    <h1>Water Intake Calculator</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/calculate_water_intake" method="post">
+        <label for="weight">Weight:</label>
+        <input type="text" id="weight" name="weight" required>
+        <select name="unit">
+            <option value="kg">kg</option>
+            <option value="lbs">lbs</option>
+        </select><br>
+        <label for="bottle_size">Bottle Size:</label>
+        <input type="text" id="bottle_size" name="bottle_size" required>
+        <select name="bottle_unit">
+            <option value="ml">ml</option>
+            <option value="cc">cc</option>
+            <option value="l">l</option>
+            <option value="oz">oz</option>
+        </select><br>
+        <!-- <span>(cm/in)</span><br> -->
+        <button type="submit">Calculate Water Intake</button>
+    </form>
+</body>
+</html>

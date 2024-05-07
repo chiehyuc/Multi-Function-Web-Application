@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Pressure Checker</title>
+</head>
+<body>
+    <h1>Check Blood Pressure</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/check_blood_pressure" method="post">
+        <div class="row">
+            <label for="systolic">Systolic Pressure:</label>
+            <input type="text" id="systolic" name="systolic" required>
+        </div>
+        <div class="row">
+            <label for="diastolic">Diastolic Pressure:</label>
+            <input type="text" id="diastolic" name="diastolic" required>
+        </div>
+        <button type="submit">Check Blood Pressure</button>
+    </form>
+</body>
+</html>

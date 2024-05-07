@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    <form action="/calculate_bmi" method="post">
+        <label for="weight">Weight:</label>
+        <input type="text" id="weight" name="weight" required>
+        <select name="weight_unit">
+            <option value="kg">kg</option>
+            <option value="lbs">lbs</option>
+        </select><br>
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height" required>
+        <select name="height_unit">
+            <option value="cm">cm</option>
+            <option value="ft.inches">ft.inches</option>
+        </select><br>
+        <span>(cm/in)</span><br>
+        <button type="submit">Calculate BMI</button>
+    </form>
+</body>
+</html>
